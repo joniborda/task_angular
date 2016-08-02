@@ -1,0 +1,25 @@
+{
+  "name": "task_angular",
+  "version": "1.0.0",
+  "description": "Manegador de tareas en angularjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joniborda/task_angular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joniborda/task_angular/issues"
+  },
+  "homepage": "https://github.com/joniborda/task_angular#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^2.0.0"
+  }
+}
