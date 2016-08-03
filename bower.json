@@ -1,0 +1,20 @@
+{
+  "name": "task_angular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/joniborda/task_angular",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.0",
+    "angular": "~1.5.8",
+    "angular-resource": "~1.5.8",
+    "angular-route": "~1.5.8",
+    "lumx": "~1.1.2"
+  }
+}
