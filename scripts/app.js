@@ -5,5 +5,9 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 				controller: "MainController",
 				templateUrl: "views/home.html"
 			})
+			.when("/task/new", {
+				controller: "TaskNewController",
+				templateUrl: "views/task/new.html"
+			})
 			.otherwise('/');
 	})

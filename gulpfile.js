@@ -9,7 +9,9 @@ gulp.task('scripts', function() {
       './bower_components/velocity/velocity.js',
   		'./bower_components/angular/angular.js',
   		'./bower_components/angular-resource/angular-resource.js',
-  		'./bower_components/angular-route/angular-route.js',
+      './bower_components/angular-route/angular-route.js',
+      './bower_components/velocity/velocity.js',
+      './bower_components/moment/moment.js',
   		'./bower_components/lumx/dist/lumx.js',
   		'./scripts/**'
 	])
