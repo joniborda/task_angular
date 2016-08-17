@@ -1,7 +1,9 @@
 angular
 	.module('Task')
-	.controller("MainController", function($scope, $resource) {
-
+	.controller("HomeController", function($scope, $resource, TaskResource) {
+		Task = TaskResource;
+		$scope.tasks = Task.get();
+		
 	})
 	.controller("TaskNewController", function($scope, $resource, TaskResource, $location) {
 		Task = TaskResource;

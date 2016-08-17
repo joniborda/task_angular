@@ -1,0 +1,17 @@
+<div class="p+">
+	<div class="card top-space" ng-repeat="task in tasks">
+		<div class="p+">
+			<span class="fs-headline display-block tc-red-900">
+				{{task.title}}
+			</span>
+			<div class="paragraph fs-body-1 nt+">
+				{{ task.description}}
+			</div>
+			<div class="card__actions">
+				<a href="#/task/{{task.id}}" class="btn btn--m btn--blue btn--flat" lx-ripple>Leer mas</a>
+				<a href="#/tasks/edit/{{task.id}}" class="btn btn--m btn--orange btn--flat" lx-ripple>Editar</a>
+				<a ng-click="removePost(task)" class="btn btn--m btn--red btn--flat" lx-ripple>Eliminar</a>
+			</div>
+		</div>
+	</div>
+</div>

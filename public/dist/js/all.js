@@ -56580,7 +56580,7 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 	.config(function($routeProvider) {
 		$routeProvider
 			.when("/", {
-				controller: "MainController",
+				controller: "HomeController",
 				templateUrl: "views/home.html"
 			})
 			.when("/task/new", {
@@ -56591,8 +56591,10 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 	})
 angular
 	.module('Task')
-	.controller("MainController", function($scope, $resource) {
-
+	.controller("HomeController", function($scope, $resource, TaskResource) {
+		Task = TaskResource;
+		$scope.tasks = Task.get();
+		
 	})
 	.controller("TaskNewController", function($scope, $resource, TaskResource, $location) {
 		Task = TaskResource;

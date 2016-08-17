@@ -2,7 +2,7 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 	.config(function($routeProvider) {
 		$routeProvider
 			.when("/", {
-				controller: "MainController",
+				controller: "HomeController",
 				templateUrl: "views/home.html"
 			})
 			.when("/task/new", {

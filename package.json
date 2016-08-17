@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/joniborda/task_angular#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
