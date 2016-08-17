@@ -29,3 +29,10 @@ gulp.task('css', function() {
     .pipe(minify())
     .pipe(gulp.dest('./dist/css/'))
 });
+
+// Fonts
+gulp.task('fonts', function() {
+  return gulp.src([
+    './bower_components/lumx/dist/fonts/materialdesignicons-webfont.*'
+  ]).pipe(gulp.dest('dist/css/fonts/'));
+});
