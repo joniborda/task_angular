@@ -14,17 +14,19 @@ var Task = mongoose.model("Task", task_schema);
 
 app.use("/", express.static("public"));
 
-app.get("/api", function(req, res) {
+app.post("/api", function(req, res) {
 
-
+console.log(req);
+/*
 	var task = new Task({
 		title: $scope.post.title,
 		description: $scope.post.description
 	});
 
 	task.save(function() {
-		res.send("Guardamos tus datos");	
 	});
+	*/
+		res.send("Guardamos tus datos");	
 });
 
 app.listen(80);
