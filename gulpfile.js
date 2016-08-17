@@ -13,26 +13,26 @@ gulp.task('scripts', function() {
       './bower_components/velocity/velocity.js',
       './bower_components/moment/moment.js',
   		'./bower_components/lumx/dist/lumx.js',
-  		'./scripts/**'
+  		'./public/scripts/**'
 	])
     .pipe(concat('all.js'))
    // .pipe(uglify())
-    .pipe(gulp.dest('./dist/js/'))
+    .pipe(gulp.dest('./public/dist/js/'))
 });
 
 gulp.task('css', function() {
   gulp.src([
-  		'./css/main.css',
+  		'./public/css/main.css',
   		'./bower_components/lumx/dist/lumx.css'
 	])
     .pipe(concat('all.css'))
     .pipe(minify())
-    .pipe(gulp.dest('./dist/css/'))
+    .pipe(gulp.dest('./public/dist/css/'))
 });
 
 // Fonts
 gulp.task('fonts', function() {
   return gulp.src([
     './bower_components/lumx/dist/fonts/materialdesignicons-webfont.*'
-  ]).pipe(gulp.dest('dist/css/fonts/'));
+  ]).pipe(gulp.dest('./public/dist/css/fonts/'));
 });
