@@ -5,6 +5,13 @@ Manegador de tareas en angularjs
     npm install
     bower install
 
-## Crear script js y css
+## Create script js y css
     gulp scripts
     gulp css
+    
+## Run mongodb
+    mongod -dbpath=C:/mongodb/data/db
+## Run server
+Inside root folder execute:
+
+    node server.js
