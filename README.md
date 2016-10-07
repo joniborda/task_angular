@@ -16,8 +16,8 @@ Inside root folder execute:
 
     node server.js
 Or
+
     npm start
 
 ## Optionally run with postgres database
 	node server_pg.js
-	
