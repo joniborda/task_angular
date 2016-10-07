@@ -57,9 +57,19 @@ app.post("/api/", function(req, res) {
 	});
 });
 
+app.put("/api/", function(req, res) {
+
+	Task.get(req.body.data.id, function (err, task) {
+	    task.save(req.body.data, function (err) {
+	    	res.send("asdf");
+	    });
+	});
+
+});
+
 app.get("/api", function(req, res) {
 
-	Task.find({}, function(err, tasks) {
+	Task.find({}, { limit : 10}, function(err, tasks) {
 	    var taskMap = {};
 
 	    tasks.forEach(function(task) {
@@ -67,6 +77,13 @@ app.get("/api", function(req, res) {
 	    });
 
     	res.send(taskMap);  
+	});
+});
+
+app.get("/api/:id", function(req, res) {
+
+	Task.get(req.params.id, function(err, task) {
+    	res.send(task);
 	});
 });
 

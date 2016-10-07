@@ -56587,6 +56587,10 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 				controller: "TaskNewController",
 				templateUrl: "views/task/new.html"
 			})
+			.when("/task/edit/:id", {
+				controller: "TaskEditController",
+				templateUrl: "views/task/edit.html"
+			})
 			.otherwise('/');
 	})
 angular
@@ -56600,11 +56604,19 @@ angular
 		Task = TaskResource;
 		$scope.task = {};
 		$scope.saveTask = function() {
-			console.log($scope.task);
 			Task.save({data: $scope.task}, function(data) {
-			console.log(data);
 			$location.path("/");
 		});
+		}
+	})
+	.controller("TaskEditController", function($scope, $resource, TaskResource, $location, $routeParams) {
+		Task = TaskResource;
+		$scope.task = Task.get({id:$routeParams.id});
+
+		$scope.saveTask = function() {
+			Task.update($scope.task.id, {data: $scope.task}, function(data) {
+				$location.path("/");
+			});
 		}
 	});
 

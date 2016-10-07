@@ -9,5 +9,9 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 				controller: "TaskNewController",
 				templateUrl: "views/task/new.html"
 			})
+			.when("/task/edit/:id", {
+				controller: "TaskEditController",
+				templateUrl: "views/task/edit.html"
+			})
 			.otherwise('/');
 	})
