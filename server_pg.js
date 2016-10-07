@@ -11,7 +11,7 @@ var opts = {
 	host:     '10.2.87.142',
 	database: 'task_orm',
 	user: 'postgres',
-	password: 'sdh2211anm',
+	password: 'postgres',
 	protocol: 'pg',
 	port:     '5432',
 	query:    {pool: true}
