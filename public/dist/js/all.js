@@ -56591,6 +56591,10 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 				controller: "TaskEditController",
 				templateUrl: "views/task/edit.html"
 			})
+			.when("/user/login", {
+				controller: "UserLoginController",
+				templateUrl: "views/user/login.html"
+			})
 			.otherwise('/');
 	})
 angular
@@ -56618,9 +56622,29 @@ angular
 				$location.path("/");
 			});
 		}
+	})
+	.controller("UserLoginController", function($scope, $resource, $location, $routeParams, $http) {
+		$scope.user = {};
+		$scope.login = function() {
+			$http.post(
+				"/user/login",
+				{
+					username: $scope.user.username,
+					password: $scope.user.password
+				}
+			).then(function successCallback(response) {
+			    	console.log(response.data.success);
+			    if (response.data.success) {
+			    	$location.path("/");
+			    } else {
+			    	console.log('no entro');
+			    }
+			  }, function errorCallback(response) {
+			  });
+		}
 	});
 
 angular.module("Task")
 .factory("TaskResource", function($resource) {
-	return $resource('http://localhost/api/:id', { id : "@id"}, {update: {method: "PUT"}});
+	return $resource('http://localhost:' + 5000 + '/api/:id', { id : "@id"}, {update: {method: "PUT"}});
 })

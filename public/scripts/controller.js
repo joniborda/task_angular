@@ -23,4 +23,22 @@ angular
 				$location.path("/");
 			});
 		}
+	})
+	.controller("UserLoginController", function($scope, $resource, $location, $routeParams, $http) {
+		$scope.user = {};
+		$scope.login = function() {
+			$http.post(
+				"/user/login",
+				{
+					username: $scope.user.username,
+					password: $scope.user.password
+				}
+			).then(function successCallback(response) {
+			    if (response.data.success) {
+			    	$location.path("/");
+			    } else {
+			    }
+			  }, function errorCallback(response) {
+			  });
+		}
 	});

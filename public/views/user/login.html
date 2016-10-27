@@ -1,0 +1,29 @@
+<div class="p+">
+	<form ng-submit="login()">
+		<div class="card">
+			<div class="p+">
+				<strong class="fs-headline display-block">Iniciar Sesión</strong>
+			    <div flex-container="row" flex-gutter="24">
+				    <div flex-item>
+					    <lx-text-field lx-label="Title">
+					        <input type="text" ng-model="user.username">
+					    </lx-text-field>
+				 	</div>
+				 	<div flex-item>
+				 		
+				 	</div>
+			 	</div>
+			    <div flex-container="row" flex-gutter="24">
+			        <div flex-item>
+			            <lx-text-field lx-label="Description">
+			                <input type="text" ng-model="user.password">
+			            </lx-text-field>
+			        </div>
+			    </div>
+				<button type="submit" class="btn btn--blue btn--l btn--raised">
+					Guardar
+				</button>
+		    </div>
+	    </div>
+    </form>
+</div>

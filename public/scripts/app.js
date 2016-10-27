@@ -13,5 +13,9 @@ angular.module("Task",["lumx","ngRoute", "ngResource"])
 				controller: "TaskEditController",
 				templateUrl: "views/task/edit.html"
 			})
+			.when("/user/login", {
+				controller: "UserLoginController",
+				templateUrl: "views/user/login.html"
+			})
 			.otherwise('/');
 	})
